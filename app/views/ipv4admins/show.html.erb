@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @ipv4admin.id %>
+</p>
+
+<p>
+  <strong>Ip status:</strong>
+  <%= @ipv4admin.ip_status %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @ipv4admin.ip_address %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @ipv4admin.host %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @ipv4admin.note %>
+</p>
+
+<p>
+  <strong>Update time:</strong>
+  <%= @ipv4admin.update_time %>
+</p>
+
+<%= link_to 'Edit', edit_ipv4admin_path(@ipv4admin) %> |
+<%= link_to 'Back', ipv4admins_path %>

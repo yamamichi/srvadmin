@@ -1,4 +1,6 @@
 ServerAdmin::Application.routes.draw do
+  resources :ipv4admins
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
