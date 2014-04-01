@@ -11,14 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329110024) do
+ActiveRecord::Schema.define(version: 20140401055551) do
 
   create_table "ipv4admins", force: true do |t|
     t.integer  "ip_status"
-    t.text     "ip_address"
+    t.string   "ip_address",  limit: 18
     t.text     "host"
     t.text     "note"
     t.date     "update_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ipv4admins", ["ip_address"], name: "index_ipv4admins_on_ip_address", using: :btree
+
+  create_table "products", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.decimal  "price",       precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
