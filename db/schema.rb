@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401055551) do
+ActiveRecord::Schema.define(version: 20140401071737) do
 
   create_table "ipv4admins", force: true do |t|
     t.integer  "ip_status"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140401055551) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price",       precision: 8, scale: 2
+    t.decimal  "price",       precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
